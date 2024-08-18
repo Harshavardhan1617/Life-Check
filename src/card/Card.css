@@ -1,0 +1,17 @@
+.card {
+  --card-color: #22272e;
+  --card-text-color: #c4d1de;
+  height: auto;
+  width: 300px;
+  background-color: var(--card-color);
+  color: var(--card-text-color);
+  padding: 12px 22px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.edit-icon {
+  height: 30px;
+}
