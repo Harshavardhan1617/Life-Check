@@ -1,8 +1,42 @@
-.list {
-  height: auto;
-  width: auto;
-  padding: 8px 6px;
-  background-color: #161b22;
+.whole-card {
+  --card-list-color: #161b22;
+  --card-color: #373e47;
+  background-color: var(--card-list-color);
   display: inline-block;
-  border-radius: 6px;
+  color: #e5e5e5;
+  border-radius: 8px;
+}
+
+.list {
+  height: 440px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  width: auto;
+  padding: 0px 4px 8px 4px;
+  background-color: var(--card-list-color);
+  display: inline-block;
+}
+
+.whole-card h3 {
+  padding-left: 12px;
+}
+
+.add-btn {
+  height: 36px;
+  width: 180px;
+  background-color: var(--card-list-color);
+  color: #e5e5e5;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 2px 12px 8px 12px;
+  border-radius: 12px;
+  padding-left: 6px;
+  gap: 6px;
+}
+
+.add-btn:hover {
+  background-color: var(--card-color);
+  cursor: pointer;
 }
