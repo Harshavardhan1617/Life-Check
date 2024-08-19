@@ -27,9 +27,9 @@
               "state": {
                 "file": "design.canvas",
                 "viewState": {
-                  "x": 727.8420636677948,
-                  "y": 63.53970084309231,
-                  "zoom": -0.20000000000000007
+                  "x": 653.1320949432404,
+                  "y": 18.759545923632686,
+                  "zoom": -0.046873403420912646
                 }
               }
             }
@@ -164,9 +164,9 @@
   },
   "active": "17820b764a17d7cf",
   "lastOpenFiles": [
-    "Untitled.md",
-    "design.canvas",
     "notes.md",
+    "design.canvas",
+    "Untitled.md",
     "Welcome.md"
   ]
 }
