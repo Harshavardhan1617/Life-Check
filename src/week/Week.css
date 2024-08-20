@@ -1,0 +1,12 @@
+.week-box {
+  --background: #023047;
+  --unfinished-box: #8ecae6;
+  --finished-box: #126782;
+  --past-achievement: #fb8500;
+  --todo-future: #ffb703;
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+  background-color: var(--todo-future);
+  margin: 10px;
+}
