@@ -30,7 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  margin: 2px 12px 8px 12px;
+  margin: 4px 12px 8px 12px;
   border-radius: 12px;
   padding-left: 6px;
   gap: 6px;
@@ -39,4 +39,15 @@
 .add-btn:hover {
   background-color: var(--card-color);
   cursor: pointer;
+}
+
+.add-input input {
+  height: 50px;
+  width: 300px;
+  background-color: var(--card-color);
+  color: var(--card-text-color);
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin: 0px 8px;
+  border: none;
 }
