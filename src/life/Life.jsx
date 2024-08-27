@@ -1,10 +1,10 @@
 import Week from "../week/Week";
 import "./Life.css";
 import sampleData from "../../seeds/index";
+import { useState } from "react";
 
 export default function Life() {
   const colors = ["#48cae4", "#023e8a", "#FFB703", "#FB8500"];
-  console.log(sampleData);
 
   return (
     <div className="life">
@@ -20,7 +20,7 @@ export default function Life() {
           color = "#c2fcff";
         }
 
-        return <Week key={el.id} color={color} />;
+        return <Week key={el.id} color={color} todos={el.todos} />;
       })}
     </div>
   );

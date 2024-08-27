@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import Card from "../card/Card";
 import "./CardList.css";
 
-export default function CardList({ header }) {
+export default function CardList({ todo }) {
   var [isBeingAdded, setAdd] = useState(false);
 
   const showEdit = () => {
@@ -12,35 +12,11 @@ export default function CardList({ header }) {
   };
   return (
     <div className="whole-card">
-      <h3> {header} </h3>
       <div className="list">
-        <Card
-          todo={"this is a test todo to check the state of the item totodododo"}
-        />
-        <Card
-          todo={"this is a test todo to check the state of the item totodododo"}
-        />
-        <Card
-          todo={"this is a test todo to check the state of the item totodododo"}
-        />
-        <Card
-          todo={"this is a test todo to check the state of the item totodododo"}
-        />
-        <Card
-          todo={"this is a test todo to check the state of the item totodododo"}
-        />
-        <Card
-          todo={"this is a test todo to check the state of the item totodododo"}
-        />
-        <Card
-          todo={"this is a test todo to check the state of the item totodododo"}
-        />
-        <Card
-          todo={"this is a test todo to check the state of the item totodododo"}
-        />
-        <Card
-          todo={"this is a test todo to check the state of the item totodododo"}
-        />
+        {todo.map((el) => {
+          return <Card todo={el.text} key={el.id} />;
+        })}
+
         {isBeingAdded && (
           <div className="add-input">
             <input type="text" />
