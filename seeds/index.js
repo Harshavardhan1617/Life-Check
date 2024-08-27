@@ -5,8 +5,9 @@ const sampleData = [
     isFilled: true,
     haveTodos: true,
     todos: [
-      { id: crypto.randomUUID, text: "walk the dog", isChecked: true },
-      { id: crypto.randomUUID, text: "clean the house", isChecked: false },
+      { id: crypto.randomUUID(), text: "walk the dog", isChecked: true },
+      { id: crypto.randomUUID(), text: "walk the dog", isChecked: true },
+      { id: crypto.randomUUID(), text: "clean the house", isChecked: false },
     ],
   },
   {
@@ -15,9 +16,9 @@ const sampleData = [
     isFilled: true,
     haveTodos: false,
     todos: [
-      { id: crypto.randomUUID, text: "walk the dog", isChecked: true },
-      { id: crypto.randomUUID, text: "make munchuria", isChecked: false },
-      { id: crypto.randomUUID, text: "clean the house", isChecked: false },
+      { id: crypto.randomUUID(), text: "walk the dog", isChecked: true },
+      { id: crypto.randomUUID(), text: "clean the house", isChecked: false },
+      { id: crypto.randomUUID(), text: "make munchuria", isChecked: false },
     ],
   },
   {
@@ -26,9 +27,9 @@ const sampleData = [
     isFilled: false,
     haveTodos: false,
     todos: [
-      { id: crypto.randomUUID, text: "walk the dog", isChecked: false },
-      { id: crypto.randomUUID, text: "make munchuria", isChecked: false },
-      { id: crypto.randomUUID, text: "clean the house", isChecked: true },
+      { id: crypto.randomUUID(), text: "walk the dog", isChecked: false },
+      { id: crypto.randomUUID(), text: "make munchuria", isChecked: false },
+      { id: crypto.randomUUID(), text: "clean the house", isChecked: true },
     ],
   },
   {
@@ -37,9 +38,13 @@ const sampleData = [
     isFilled: false,
     haveTodos: true,
     todos: [
-      { id: crypto.randomUUID, text: "walk the dog", isChecked: false },
-      { id: crypto.randomUUID, text: "make munchuria", isChecked: false },
-      { id: crypto.randomUUID, text: "clean the house", isChecked: true },
+      {
+        id: crypto.randomUUID(),
+        text: "walk the dog walk the dog walk the dog walk the dog walk the dog",
+        isChecked: false,
+      },
+      { id: crypto.randomUUID(), text: "clean the house", isChecked: true },
+      { id: crypto.randomUUID(), text: "make munchuria", isChecked: false },
     ],
   },
 ];
