@@ -12,11 +12,21 @@
 
 .add-input {
   margin-top: auto;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .add-input textarea:focus {
   outline: none;
   overflow-y: hidden;
+}
+
+.add-input button {
+  border: none;
+  height: 35px;
+  width: 80px;
+  border-radius: 8px;
 }
