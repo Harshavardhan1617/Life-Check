@@ -1,0 +1,22 @@
+.add-input textarea {
+  height: auto;
+  width: 300px;
+  background-color: var(--card-color);
+  color: var(--card-text-color);
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin: 0px 8px 8px 8px;
+  border: none;
+  font-size: medium;
+}
+
+.add-input {
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+}
+
+.add-input textarea:focus {
+  outline: none;
+  overflow-y: hidden;
+}
