@@ -5,11 +5,12 @@
   background-color: var(--card-list-color);
   display: inline-block;
   color: #e5e5e5;
-  border-radius: 8px;
+  border-radius: 4px;
+  padding-top: 8px;
 }
 
 .list {
-  height: 440px;
+  height: 430px;
   overflow-y: scroll;
   scrollbar-width: none;
   width: auto;
@@ -19,8 +20,11 @@
   position: relative;
 }
 
-.whole-card h3 {
+.whole-card p {
   padding-left: 12px;
+  margin: 10px 0px;
+  font-weight: 500;
+  font-size: medium;
 }
 
 .add-btn {
