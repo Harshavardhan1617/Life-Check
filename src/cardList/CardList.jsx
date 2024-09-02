@@ -3,12 +3,18 @@ import React, { useRef } from "react";
 
 import Card from "../card/Card";
 import "./CardList.css";
+import InputTodo from "../InputTodo/InputTodo";
 
 export default function CardList({ todo }) {
   var [isBeingAdded, setAdd] = useState(false);
+  const [addTodo, setNewTodo] = useState("");
 
   const showEdit = () => {
     setAdd((isBeingAdded = !isBeingAdded));
+  };
+
+  const updateTodo = (evt) => {
+    setNewTodo(evt.target.value);
   };
   return (
     <div className="whole-card">
@@ -18,9 +24,7 @@ export default function CardList({ todo }) {
         })}
 
         {isBeingAdded && (
-          <div className="add-input">
-            <input type="text" />
-          </div>
+          <InputTodo addTodo={addTodo} updateTodo={updateTodo} />
         )}
       </div>
       <div className="add-btn" onClick={showEdit}>
