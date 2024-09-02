@@ -1,7 +1,9 @@
+const timeStamp = 976368600000;
+
 const sampleData = [
   {
-    id: crypto.randomUUID(),
-    name: "first week of july 2024",
+    id: timeStamp,
+
     isFilled: true,
     haveTodos: true,
     todos: [
@@ -11,8 +13,7 @@ const sampleData = [
     ],
   },
   {
-    id: crypto.randomUUID(),
-    name: "second week of july 2024",
+    id: timeStamp + 1 * 604800000,
     isFilled: true,
     haveTodos: false,
     todos: [
@@ -22,8 +23,8 @@ const sampleData = [
     ],
   },
   {
-    id: crypto.randomUUID(),
-    name: "third week of july 2024",
+    id: timeStamp + 2 * 604800000,
+
     isFilled: false,
     haveTodos: false,
     todos: [
@@ -33,8 +34,8 @@ const sampleData = [
     ],
   },
   {
-    id: crypto.randomUUID(),
-    name: "third week of july 2024",
+    id: timeStamp + 3 * 604800000,
+
     isFilled: false,
     haveTodos: true,
     todos: [
