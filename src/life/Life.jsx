@@ -4,8 +4,6 @@ import sampleData from "../../seeds/index";
 import { useState } from "react";
 
 export default function Life() {
-  const colors = ["#48cae4", "#023e8a", "#FFB703", "#FB8500"];
-
   return (
     <div className="life">
       {sampleData.map((el) => {
@@ -20,7 +18,9 @@ export default function Life() {
           color = "#c2fcff";
         }
 
-        return <Week key={el.id} color={color} todos={el.todos} />;
+        return (
+          <Week key={el.id} color={color} todos={el.todos} timeStamp={el.id} />
+        );
       })}
     </div>
   );

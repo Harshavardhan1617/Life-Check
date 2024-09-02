@@ -5,15 +5,19 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import CardList from "../cardList/CardList";
 
-export default function Week({ color = "#219EBC", todos }) {
+export default function Week({ color = "#219EBC", todos, timeStamp }) {
   const [anchorEl, setAnchorEl] = useState(null);
-
+  const [listTodos, setTodos] = useState(todos);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
   const handleClose = () => {
     setAnchorEl(null);
+  };
+  const appendTodos = (text) => {
+    const newTodo = { id: crypto.randomUUID(), text: text, isChecked: false };
+    setTodos([...listTodos, newTodo]);
+    console.log([...listTodos, newTodo]);
   };
 
   const open = Boolean(anchorEl);
@@ -39,8 +43,11 @@ export default function Week({ color = "#219EBC", todos }) {
           horizontal: "center",
         }}
       >
-        {/* <CardList todo={todos} /> */}
-        <CardList todo={todos} />
+        <CardList
+          todo={listTodos}
+          appendTodos={appendTodos}
+          timeStamp={timeStamp}
+        />
       </Popover>
     </div>
   );
