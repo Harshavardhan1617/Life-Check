@@ -45,7 +45,8 @@ export default function Life() {
       {sampleData.map((el) => {
         let color;
         if (el.id < today && el.todos.length > 0) {
-          color = "#ff6000";
+          // color = "#ff6000";
+          color = "#38b000";
         } else if (el.id < today && el.todos.length === 0) {
           color = "#219ebc";
         } else if (el.id > today && el.todos.length > 0) {

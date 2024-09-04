@@ -2,7 +2,6 @@
   --card-color: #373e47;
   --card-text-color: #c4d1de;
   height: auto;
-  width: 300px;
   background-color: var(--card-color);
   color: var(--card-text-color);
   padding: 8px 14px;
