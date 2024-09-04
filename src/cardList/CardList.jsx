@@ -23,15 +23,33 @@ const calendarData = (stamp) => {
   return result;
 };
 
-export default function CardList({ todo, appendTodos, timeStamp }) {
+export default function CardList({
+  todo,
+  appendTodos,
+  timeStamp,
+  handleClose,
+}) {
   var [isBeingAdded, setAdd] = useState(false);
   const showEdit = () => {
     setAdd((isBeingAdded = !isBeingAdded));
   };
   const timeStampData = calendarData(timeStamp);
+
+  const closeCardList = () => {
+    handleClose();
+  };
+
   return (
     <div className="whole-card">
-      <p>{`${timeStampData.weekNumber} week of ${timeStampData.month}, ${timeStampData.year}`}</p>
+      <div className="card-header">
+        <p>{`${timeStampData.weekNumber} week of ${timeStampData.month}, ${timeStampData.year}`}</p>
+        <div
+          className="material-symbols-outlined close-icon"
+          onClick={closeCardList}
+        >
+          close
+        </div>
+      </div>
 
       <div className="list">
         {todo.map((el) => {

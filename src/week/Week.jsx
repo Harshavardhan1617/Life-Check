@@ -47,6 +47,7 @@ export default function Week({ color = "#219EBC", todos, timeStamp }) {
           todo={listTodos}
           appendTodos={appendTodos}
           timeStamp={timeStamp}
+          handleClose={handleClose}
         />
       </Popover>
     </div>

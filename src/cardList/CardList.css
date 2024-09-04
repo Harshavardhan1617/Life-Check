@@ -42,6 +42,20 @@
   gap: 6px;
 }
 
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.close-icon {
+  margin: auto;
+}
+
+.close-icon:hover {
+  cursor: pointer;
+}
+
 .add-btn:hover {
   background-color: var(--card-color);
   cursor: pointer;
