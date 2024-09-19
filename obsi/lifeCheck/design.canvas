@@ -1,34 +1,30 @@
 {
 	"nodes":[
-		{"id":"f1317cd40a8438fe","type":"text","text":"card\n","x":-80,"y":-160,"width":100,"height":50,"color":"6"},
 		{"id":"2cebf9ff621042ac","type":"text","text":"week","x":460,"y":-110,"width":125,"height":50,"color":"6"},
-		{"id":"271c780497b56421","type":"text","text":"card list","x":160,"y":-30,"width":128,"height":50},
 		{"id":"c3280b0066e04496","type":"text","text":"week","x":460,"y":270,"width":125,"height":50},
 		{"id":"408f166990fffb2f","type":"text","text":"life","x":820,"y":70,"width":94,"height":50,"color":"6"},
-		{"id":"6c0aaadaf24dc62d","type":"text","text":"when clicked on week component the card list should show up as a tooltip\nor popup","x":638,"y":-460,"width":302,"height":115,"color":"3"},
-		{"id":"7fd99d254cee6666","type":"text","text":"card list","x":160,"y":-210,"width":128,"height":50,"color":"6"},
 		{"id":"2b6dc2fc33887081","type":"text","text":"state lives in life component","x":1004,"y":291,"width":196,"height":84,"color":"3"},
-		{"id":"0436de8b23640e2c","type":"text","text":"add button at the bottom","x":-52,"y":-460,"width":212,"height":71,"color":"6"},
 		{"id":"c5b12e2a3d45a647","type":"text","text":"app","x":1141,"y":70,"width":118,"height":50,"color":"6"},
-		{"id":"e1a3d058723e624d","type":"text","text":"when clicked, show the input field \n```javascript\nconst onAdd = false\nonClick(onAdd = true)\nonAdd && <input>\n```","x":-460,"y":-620,"width":320,"height":196,"color":"3"},
-		{"id":"9071d02dfc435a72","type":"text","text":"card\n","x":-80,"y":-260,"width":100,"height":50},
-		{"id":"a8ddb451429ae32f","x":638,"y":430,"width":276,"height":110,"color":"3","type":"text","text":"\n## colors\n\n\tbackground: caf0f8"},
-		{"id":"6c4f36da8ab3c0bb","x":372,"y":600,"width":288,"height":200,"color":"3","type":"text","text":"## colors\n\nunfinished: 90e0ef\nfinished: 023e8a\npast achievement: FFB703\nfuture todo: FB8500"}
+		{"id":"5428a87b18838e49","x":-820,"y":-161,"width":171,"height":51,"color":"6","type":"text","text":"cardFooter"},
+		{"id":"271c780497b56421","type":"text","text":"card list","x":-280,"y":-340,"width":128,"height":50,"color":"6"},
+		{"id":"9316669d714957a7","x":140,"y":-620,"width":130,"height":50,"type":"text","text":"PopOver"},
+		{"id":"9071d02dfc435a72","type":"text","text":"card\n","x":-820,"y":-595,"width":100,"height":50,"color":"6"},
+		{"id":"19f9e79b43e8d85b","x":-1800,"y":-400,"width":250,"height":60,"color":"6","type":"text","text":"add input "},
+		{"id":"ec65144257a337f6","x":-1800,"y":7,"width":250,"height":63,"color":"6","type":"text","text":"add btn"}
 	],
 	"edges":[
-		{"id":"780ddef59437b82b","fromNode":"9071d02dfc435a72","fromSide":"right","toNode":"7fd99d254cee6666","toSide":"left"},
-		{"id":"6bcd68b01070d50e","fromNode":"f1317cd40a8438fe","fromSide":"right","toNode":"7fd99d254cee6666","toSide":"left"},
-		{"id":"d450039fdd08a4c5","fromNode":"7fd99d254cee6666","fromSide":"right","toNode":"2cebf9ff621042ac","toSide":"left"},
-		{"id":"73e665089575c1f0","fromNode":"2cebf9ff621042ac","fromSide":"right","toNode":"408f166990fffb2f","toSide":"left"},
+		{"id":"780ddef59437b82b","fromNode":"9071d02dfc435a72","fromSide":"right","toNode":"271c780497b56421","toSide":"left","label":"todo"},
+		{"id":"73e665089575c1f0","fromNode":"2cebf9ff621042ac","fromSide":"right","toNode":"408f166990fffb2f","toSide":"left","label":"color, todos, timeStamp"},
 		{"id":"48a163d8c69124dc","fromNode":"408f166990fffb2f","fromSide":"right","toNode":"c5b12e2a3d45a647","toSide":"left"},
-		{"id":"375fb58da2854d7d","fromNode":"271c780497b56421","fromSide":"right","toNode":"2cebf9ff621042ac","toSide":"left"},
+		{"id":"375fb58da2854d7d","fromNode":"271c780497b56421","fromSide":"right","toNode":"9316669d714957a7","toSide":"left","toEnd":"none"},
 		{"id":"78e9ae0c06545a0f","fromNode":"c3280b0066e04496","fromSide":"right","toNode":"408f166990fffb2f","toSide":"left"},
-		{"id":"e862bcf2056e1942","fromNode":"2cebf9ff621042ac","fromSide":"top","toNode":"6c0aaadaf24dc62d","toSide":"bottom"},
 		{"id":"7fd74a01039573db","fromNode":"408f166990fffb2f","fromSide":"bottom","toNode":"2b6dc2fc33887081","toSide":"top"},
-		{"id":"eb5d3cb405d9ac57","fromNode":"7fd99d254cee6666","fromSide":"top","toNode":"0436de8b23640e2c","toSide":"bottom"},
-		{"id":"ceeb039ea39b9eec","fromNode":"0436de8b23640e2c","fromSide":"left","toNode":"e1a3d058723e624d","toSide":"right"},
-		{"id":"8395c0e5f9ae3744","fromNode":"e1a3d058723e624d","fromSide":"right","toNode":"0436de8b23640e2c","toSide":"left"},
-		{"id":"62dca89b647cd639","fromNode":"c3280b0066e04496","fromSide":"bottom","toNode":"6c4f36da8ab3c0bb","toSide":"top"},
-		{"id":"3c40449ae2a2e62f","fromNode":"408f166990fffb2f","fromSide":"bottom","toNode":"a8ddb451429ae32f","toSide":"top"}
+		{"id":"428c7a64617abfe0","fromNode":"271c780497b56421","fromSide":"left","toNode":"5428a87b18838e49","toSide":"right","label":"appendTodos"},
+		{"id":"ac224e43b106d69a","fromNode":"5428a87b18838e49","fromSide":"left","toNode":"19f9e79b43e8d85b","toSide":"right","label":"setTodo, addTodo, appendTodos, setNewTodo, toggleNewTodo "},
+		{"id":"2258883f2ac9d2b8","fromNode":"5428a87b18838e49","fromSide":"left","toNode":"ec65144257a337f6","toSide":"right","label":"toggleTodo, toggleNewTodo"},
+		{"id":"baea8440967a31ca","fromNode":"19f9e79b43e8d85b","fromSide":"bottom","toNode":"ec65144257a337f6","toSide":"top"},
+		{"id":"ce8169f658093c8c","fromNode":"ec65144257a337f6","fromSide":"top","toNode":"19f9e79b43e8d85b","toSide":"bottom","label":"toggle"},
+		{"id":"a059e039efaddba2","fromNode":"2cebf9ff621042ac","fromSide":"top","toNode":"9316669d714957a7","toSide":"right"},
+		{"id":"2b95c19da6dae316","fromNode":"2cebf9ff621042ac","fromSide":"left","toNode":"271c780497b56421","toSide":"right","label":"listOfTodos, appendTodos, timeStamp, handleClose(popover)"}
 	]
 }
