@@ -3,7 +3,6 @@ const timeStamp = 976368600000;
 const sampleData = [
   {
     id: timeStamp,
-
     isFilled: true,
     haveTodos: true,
     todos: [

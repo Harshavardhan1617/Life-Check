@@ -27,21 +27,6 @@
   font-size: medium;
 }
 
-.add-btn {
-  height: 36px;
-  width: 180px;
-  background-color: var(--card-list-color);
-  color: #e5e5e5;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  margin: 4px 12px 8px 12px;
-  border-radius: 12px;
-  padding-left: 6px;
-  gap: 6px;
-}
-
 .card-header {
   display: flex;
   flex-direction: row;
@@ -53,10 +38,5 @@
 }
 
 .close-icon:hover {
-  cursor: pointer;
-}
-
-.add-btn:hover {
-  background-color: var(--card-color);
   cursor: pointer;
 }

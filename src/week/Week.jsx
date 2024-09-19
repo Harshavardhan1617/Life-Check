@@ -44,7 +44,7 @@ export default function Week({ color = "#219EBC", todos, timeStamp }) {
         }}
       >
         <CardList
-          todo={listTodos}
+          listOfTodos={listTodos}
           appendTodos={appendTodos}
           timeStamp={timeStamp}
           handleClose={handleClose}

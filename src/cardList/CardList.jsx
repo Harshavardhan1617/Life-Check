@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 
 import Card from "../card/Card";
 import "./CardList.css";
-import InputTodo from "../InputTodo/InputTodo";
+import CardFooter from "../cardfooter/CardFooter";
 
 const calendarData = (stamp) => {
   const result = {
@@ -24,15 +24,11 @@ const calendarData = (stamp) => {
 };
 
 export default function CardList({
-  todo,
+  listOfTodos,
   appendTodos,
   timeStamp,
   handleClose,
 }) {
-  var [isBeingAdded, setAdd] = useState(false);
-  const showEdit = () => {
-    setAdd((isBeingAdded = !isBeingAdded));
-  };
   const timeStampData = calendarData(timeStamp);
 
   const closeCardList = () => {
@@ -52,17 +48,11 @@ export default function CardList({
       </div>
 
       <div className="list">
-        {todo.map((el) => {
+        {listOfTodos.map((el) => {
           return <Card todo={el.text} key={el.id} />;
         })}
       </div>
-      {isBeingAdded && <InputTodo appendTodos={appendTodos} />}
-      <div className="add-btn" onClick={showEdit}>
-        {!isBeingAdded && (
-          <span className="material-symbols-outlined">add</span>
-        )}
-        {isBeingAdded ? <p>Done</p> : <p>Add a Todo</p>}
-      </div>
+      <CardFooter appendTodos={appendTodos} />
     </div>
   );
 }
