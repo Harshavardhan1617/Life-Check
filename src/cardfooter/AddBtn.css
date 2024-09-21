@@ -1,0 +1,12 @@
+.add-btn {
+  display: flex;
+  align-items: center;
+  margin: 4px 12px 4px 12px;
+  border-radius: 12px;
+  gap: 6px;
+}
+
+.add-btn:hover {
+  background-color: var(--card-color);
+  cursor: pointer;
+}

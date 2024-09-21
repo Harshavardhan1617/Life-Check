@@ -1,0 +1,51 @@
+.add-input {
+  width: 100%;
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.add-input .input-area {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.add-input .input-area textarea {
+  background-color: var(--card-color);
+  border: none;
+  color: var(--card-text-color);
+  resize: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: inherit;
+  outline: none;
+  width: 95%;
+}
+
+.add-input .btn-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.add-input .btn-area .close,
+.add-input .btn-area .add {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #3a3a3a; /* Matching the edit button color */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+  font-size: 18px;
+  transition: background-color 0.2s ease;
+}
+
+.add-input .btn-area .close:hover,
+.add-input .btn-area .add:hover {
+  background-color: #4a4a4a; /* Slightly lighter on hover */
+}
