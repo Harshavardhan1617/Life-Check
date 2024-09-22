@@ -1,62 +1,48 @@
 import Week from "../week/Week";
 import "./Life.css";
-// import sampleData from "../../seeds/index";
-import { useState } from "react";
+import { createArray } from "../../seeds/sampleDataGenerator";
+
+const dateOfBirth = 976371090000;
+var sampleData = [];
+
+if (localStorage.length === 0) {
+  sampleData = createArray(dateOfBirth);
+  const sampleData_serialized = JSON.stringify(sampleData);
+  localStorage.setItem("sampleData", sampleData_serialized);
+  console.log("saved to local storage");
+} else {
+  const sampleData_deserialized = JSON.parse(
+    localStorage.getItem("sampleData")
+  );
+  sampleData = sampleData_deserialized;
+  console.log("retrieved from local storage");
+}
 
 export default function Life() {
-  const dateOfBirth = 976371090000;
-
-  const createArray = (dob) => {
-    const date = new Date(dob);
-    var timeStamp = date.valueOf();
-    const AverageLifeSpanYears = 75;
-    const millisecondsInWeek = 604800000;
-    const weeksIn75Year = 3913;
-    const monthsIn75Years = weeksIn75Year / 4;
-    const db = [
-      {
-        id: timeStamp,
-        todos: [
-          { id: crypto.randomUUID(), text: "walk the dog", isChecked: true },
-          { id: crypto.randomUUID(), text: "walk the dog", isChecked: true },
-          {
-            id: crypto.randomUUID(),
-            text: "clean the house",
-            isChecked: false,
-          },
-        ],
-      },
-    ];
-    for (var i = 0; i <= weeksIn75Year; i++) {
-      timeStamp += millisecondsInWeek;
-      const element = {
-        id: timeStamp,
-        todos: [],
-      };
-      db.push(element);
-    }
-    return db;
-  };
-
-  const sampleData = createArray(dateOfBirth);
   const today = new Date().valueOf();
+
   return (
     <div className="life">
-      {sampleData.map((el) => {
+      {sampleData.map((eachWeek) => {
         let color;
-        if (el.id < today && el.todos.length > 0) {
+        if (eachWeek.id < today && eachWeek.todos.length > 0) {
           // color = "#ff6000";
           color = "#38b000";
-        } else if (el.id < today && el.todos.length === 0) {
+        } else if (eachWeek.id < today && eachWeek.todos.length === 0) {
           color = "#219ebc";
-        } else if (el.id > today && el.todos.length > 0) {
+        } else if (eachWeek.id > today && eachWeek.todos.length > 0) {
           color = "#FFB703";
         } else {
           color = "#c2fcff";
         }
 
         return (
-          <Week key={el.id} color={color} todos={el.todos} timeStamp={el.id} />
+          <Week
+            key={eachWeek.id}
+            color={color}
+            todos={eachWeek.todos}
+            timeStamp={eachWeek.id}
+          />
         );
       })}
     </div>
