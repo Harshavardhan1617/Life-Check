@@ -3,8 +3,7 @@
 		{"id":"19f9e79b43e8d85b","type":"text","text":"add input ","x":-1800,"y":-400,"width":250,"height":60,"color":"6"},
 		{"id":"ec65144257a337f6","type":"text","text":"add btn","x":-1800,"y":7,"width":250,"height":63,"color":"6"},
 		{"id":"c5b12e2a3d45a647","type":"text","text":"app","x":1180,"y":-110,"width":118,"height":50,"color":"6"},
-		{"id":"2b6dc2fc33887081","type":"text","text":"stateful component\nwith todos as state","x":425,"y":102,"width":196,"height":84,"color":"3"},
-		{"id":"d9d52c84a4ec4f22","x":735,"y":102,"width":287,"height":94,"color":"3","type":"text","text":"useContext(array). loop over the array to make each element as week component"},
+		{"id":"2b6dc2fc33887081","type":"text","text":"stateful component\nwith todos as state","x":340,"y":102,"width":281,"height":84,"color":"3"},
 		{"id":"2cebf9ff621042ac","type":"text","text":"week","x":461,"y":-290,"width":125,"height":50,"color":"6"},
 		{"id":"408f166990fffb2f","type":"text","text":"life","x":832,"y":-7,"width":94,"height":50,"color":"6"},
 		{"id":"271c780497b56421","type":"text","text":"card list","x":-180,"y":-7,"width":128,"height":50,"color":"6"},
@@ -12,7 +11,8 @@
 		{"id":"94c81a9b27827e9e","type":"text","text":"todos(state)","x":-197,"y":133,"width":162,"height":53,"color":"3"},
 		{"id":"5428a87b18838e49","type":"text","text":"cardFooter","x":-620,"y":-120,"width":171,"height":51,"color":"6"},
 		{"id":"9071d02dfc435a72","type":"text","text":"card\n","x":-620,"y":94,"width":100,"height":50,"color":"6"},
-		{"id":"67d2981e8b5a6d44","x":-695,"y":199,"width":250,"height":60,"color":"3","type":"text","text":"an array of cards"}
+		{"id":"67d2981e8b5a6d44","type":"text","text":"an array of cards","x":-695,"y":199,"width":250,"height":60,"color":"3"},
+		{"id":"e169f0e26068df1c","x":752,"y":76,"width":268,"height":84,"color":"3","type":"text","text":"recieve an array of nearly 4000elements"}
 	],
 	"edges":[
 		{"id":"780ddef59437b82b","fromNode":"9071d02dfc435a72","fromSide":"right","toNode":"271c780497b56421","toSide":"left","label":"todo"},
@@ -26,9 +26,9 @@
 		{"id":"a059e039efaddba2","fromNode":"2cebf9ff621042ac","fromSide":"top","toNode":"9316669d714957a7","toSide":"right"},
 		{"id":"2b95c19da6dae316","fromNode":"2cebf9ff621042ac","fromSide":"left","toNode":"271c780497b56421","toSide":"right","label":"todos, timeStamp, handleClose(popover)"},
 		{"id":"2b2ecb5ad9d5c6d1","fromNode":"271c780497b56421","fromSide":"bottom","toNode":"94c81a9b27827e9e","toSide":"top"},
-		{"id":"a345f6aefdfcccf5","fromNode":"408f166990fffb2f","fromSide":"bottom","toNode":"d9d52c84a4ec4f22","toSide":"top"},
 		{"id":"bc191e8db06c8cdf","fromNode":"c5b12e2a3d45a647","fromSide":"left","toNode":"408f166990fffb2f","toSide":"right"},
 		{"id":"5da5b41d22a852bd","fromNode":"408f166990fffb2f","fromSide":"left","toNode":"2cebf9ff621042ac","toSide":"right","label":"color, todos, timeStamp"},
-		{"id":"e9dfefc586c131ba","fromNode":"9071d02dfc435a72","fromSide":"bottom","toNode":"67d2981e8b5a6d44","toSide":"top"}
+		{"id":"e9dfefc586c131ba","fromNode":"9071d02dfc435a72","fromSide":"bottom","toNode":"67d2981e8b5a6d44","toSide":"top"},
+		{"id":"b0df45ef2fb774b2","fromNode":"408f166990fffb2f","fromSide":"bottom","toNode":"e169f0e26068df1c","toSide":"top"}
 	]
 }

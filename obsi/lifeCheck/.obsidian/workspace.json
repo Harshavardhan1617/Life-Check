@@ -4,20 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "5716382ce66b4372",
+        "id": "6478054ce4328408",
         "type": "tabs",
         "children": [
           {
-            "id": "17820b764a17d7cf",
+            "id": "83c0eafd098f1e9b",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
                 "file": "design.canvas",
                 "viewState": {
-                  "x": 155.34714944985782,
-                  "y": -40.32446168460686,
-                  "zoom": -0.5999999999999999
+                  "x": -251,
+                  "y": -90.5,
+                  "zoom": -0.861180840024127
                 }
               }
             }
@@ -72,7 +72,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 211.5,
+    "collapsed": true
   },
   "right": {
     "id": "45328ab8a89a908a",
@@ -149,10 +150,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "17820b764a17d7cf",
+  "active": "83c0eafd098f1e9b",
   "lastOpenFiles": [
-    "Welcome.md",
     "design.canvas",
+    "Welcome.md",
     "notes.md",
     "Untitled.md"
   ]

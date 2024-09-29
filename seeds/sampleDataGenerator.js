@@ -9,12 +9,10 @@ export const createArray = (dob) => {
     {
       id: timeStamp,
       todos: [
-        { id: crypto.randomUUID(), text: "walk the dog", isChecked: true },
-        { id: crypto.randomUUID(), text: "walk the fish", isChecked: true },
         {
           id: crypto.randomUUID(),
-          text: "clean the house",
-          isChecked: false,
+          text: "I Was brought into this world.",
+          isChecked: true,
         },
       ],
     },
