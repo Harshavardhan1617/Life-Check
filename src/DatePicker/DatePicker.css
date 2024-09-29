@@ -1,0 +1,7 @@
+.date-picker {
+  width: fit-content;
+  margin: auto auto;
+  background-color: white;
+  padding: 30px 100px 38px 100px;
+  border-radius: 8px;
+}
