@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import CardList from "../cardList/CardList";
 
-export default function Week({ color = "#219EBC", todos, timeStamp }) {
+export default function Week({ todos, timeStamp }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const [listTodos, setTodos] = useState(todos);
   const handleClick = (event) => {
@@ -22,6 +22,20 @@ export default function Week({ color = "#219EBC", todos, timeStamp }) {
 
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
+
+  const today = new Date().valueOf();
+  let color;
+  if (timeStamp < today && listTodos.length > 0) {
+    // color = "#ff6000";
+    color = "#38b000";
+  } else if (timeStamp < today && listTodos.length === 0) {
+    color = "#219ebc";
+  } else if (timeStamp > today && listTodos.length > 0) {
+    color = "#FFB703";
+  } else {
+    color = "#c2fcff";
+  }
+
   return (
     <div className="week-wrap">
       <div

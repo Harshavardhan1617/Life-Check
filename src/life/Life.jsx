@@ -19,27 +19,12 @@ if (localStorage.length === 0) {
 }
 
 export default function Life() {
-  const today = new Date().valueOf();
-
   return (
     <div className="life">
       {sampleData.map((eachWeek) => {
-        let color;
-        if (eachWeek.id < today && eachWeek.todos.length > 0) {
-          // color = "#ff6000";
-          color = "#38b000";
-        } else if (eachWeek.id < today && eachWeek.todos.length === 0) {
-          color = "#219ebc";
-        } else if (eachWeek.id > today && eachWeek.todos.length > 0) {
-          color = "#FFB703";
-        } else {
-          color = "#c2fcff";
-        }
-
         return (
           <Week
             key={eachWeek.id}
-            color={color}
             todos={eachWeek.todos}
             timeStamp={eachWeek.id}
           />
