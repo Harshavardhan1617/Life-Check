@@ -7,11 +7,11 @@ import Button from "@mui/material/Button";
 import "./DatePicker.css";
 import { useState } from "react";
 import { createArray } from "../../db";
-export default function DateOfBirthPicker({ toggle }) {
+export default function DateOfBirthPicker({ toggler }) {
   const [selectedDate, setSelectedDate] = useState(null);
 
   const handleSubmit = () => {
-    createArray(selectedDate.valueOf());
+    toggler(selectedDate);
   };
 
   const handleDateChange = (date) => {
