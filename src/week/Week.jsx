@@ -10,6 +10,7 @@ export default function Week({ todos, timeStamp }) {
   const [listTodos, setTodos] = useState(todos);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
+    console.log(timeStamp);
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -24,13 +25,15 @@ export default function Week({ todos, timeStamp }) {
   const id = open ? "simple-popover" : undefined;
 
   const today = new Date().valueOf();
+  const timeStampWeek = timeStamp + 604800000;
+
   let color;
-  if (timeStamp < today && listTodos.length > 0) {
+  if (timeStampWeek < today && listTodos.length > 0) {
     // color = "#ff6000";
     color = "#38b000";
-  } else if (timeStamp < today && listTodos.length === 0) {
+  } else if (timeStampWeek < today && listTodos.length === 0) {
     color = "#219ebc";
-  } else if (timeStamp > today && listTodos.length > 0) {
+  } else if (timeStampWeek > today && listTodos.length > 0) {
     color = "#FFB703";
   } else {
     color = "#c2fcff";
