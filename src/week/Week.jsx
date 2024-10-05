@@ -1,8 +1,7 @@
 import "./Week.css";
 import Popover from "@mui/material/Popover";
 import { useState } from "react";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+import { db } from "../../db";
 import CardList from "../cardList/CardList";
 
 export default function Week({ todos, timeStamp }) {
@@ -15,7 +14,10 @@ export default function Week({ todos, timeStamp }) {
     setAnchorEl(null);
   };
   const appendTodos = (text) => {
-    const newTodo = { id: crypto.randomUUID(), text: text, isChecked: false };
+    const newTodoID = crypto.randomUUID();
+    const newTodo = { todoID: newTodoID, text: text, isChecked: false };
+    db.todos.add(newTodo);
+    db.weeks.put({ weekID: timeStamp, todo: [String(newTodoID)] }, timeStamp);
     setTodos([...listTodos, newTodo]);
     console.log([...listTodos, newTodo]);
   };
