@@ -26,6 +26,17 @@ export default function Week({ todos, timeStamp }) {
     await db.weeks.put({ ...week, todo: [...week.todo, newTodoID] });
   };
 
+  const deleteTodos = async (id) => {
+    // Update local state
+    setTodos((prevTodos) => prevTodos.filter((todo) => todo.todoID !== id));
+
+    // Update database
+    await db.todos.delete(id);
+    const week = await db.weeks.get(timeStamp);
+    const updatedTodos = week.todo.filter((todoId) => todoId !== id);
+    await db.weeks.put({ ...week, todo: updatedTodos });
+  };
+
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
 
@@ -68,6 +79,7 @@ export default function Week({ todos, timeStamp }) {
         <CardList
           listOfTodos={listTodos}
           appendTodos={appendTodos}
+          deleteTodos={deleteTodos}
           timeStamp={timeStamp}
           handleClose={handleClose}
         />

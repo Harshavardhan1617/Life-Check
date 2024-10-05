@@ -26,6 +26,7 @@ const calendarData = (stamp) => {
 export default function CardList({
   listOfTodos,
   appendTodos,
+  deleteTodos,
   timeStamp,
   handleClose,
 }) {
@@ -48,8 +49,10 @@ export default function CardList({
       </div>
 
       <div className="list">
-        {listOfTodos.map((el) => {
-          return <Card todo={el.text} key={el.todoID} />;
+        {listOfTodos.map((todo) => {
+          return (
+            <Card todos={todo} key={todo.todoID} deleteTodos={deleteTodos} />
+          );
         })}
       </div>
       <CardFooter appendTodos={appendTodos} />

@@ -13,7 +13,11 @@
   overflow-wrap: anywhere;
 }
 
-.edit-icon {
+.delete-icon {
   height: 30px;
   margin-left: auto;
+}
+
+.delete-icon:hover {
+  cursor: pointer;
 }
