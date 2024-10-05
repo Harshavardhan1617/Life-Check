@@ -3,8 +3,8 @@ import Dexie from "dexie";
 export const db = new Dexie("lifeDB");
 
 db.version(1).stores({
-  weeks: "weekID, todo",
-  todos: "todoID, isChecked, text",
+  weeks: "weekID",
+  todos: "todoID, isChecked",
 });
 
 export const createArray = (dob) => {
