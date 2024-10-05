@@ -13,13 +13,17 @@ export default function Week({ todos, timeStamp }) {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const appendTodos = (text) => {
+  const appendTodos = async (text) => {
     const newTodoID = crypto.randomUUID();
     const newTodo = { todoID: newTodoID, text: text, isChecked: false };
-    db.todos.add(newTodo);
-    db.weeks.put({ weekID: timeStamp, todo: [String(newTodoID)] }, timeStamp);
-    setTodos([...listTodos, newTodo]);
-    console.log([...listTodos, newTodo]);
+
+    // Update local state
+    setTodos((prevTodos) => [...prevTodos, newTodo]);
+
+    // Update database
+    await db.todos.add(newTodo);
+    const week = await db.weeks.get(timeStamp);
+    await db.weeks.put({ ...week, todo: [...week.todo, newTodoID] });
   };
 
   const open = Boolean(anchorEl);
