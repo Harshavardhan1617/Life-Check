@@ -15,15 +15,27 @@ export const createArray = (dob) => {
   const weeksIn75Year = 3913;
   const monthsIn75Years = weeksIn75Year / 4;
   const dbWeeks = [];
+
+  //create new todos for the first week
+  const firstTodoID = crypto.randomUUID();
+  const firstTodo = {
+    todoID: firstTodoID,
+    isChecked: true,
+    text: "I was born into this chaos, a rebel without a cause",
+  };
+
+  db.todos.add(firstTodo);
+
   for (var i = 0; i <= weeksIn75Year; i++) {
-    dbWeeks.push({ weekID: timeStamp, todo: [] });
+    const weekTodo = i === 0 ? [firstTodoID] : [];
+    dbWeeks.push({ weekID: timeStamp, todo: weekTodo });
     timeStamp += millisecondsInWeek;
   }
   db.weeks
     .bulkAdd(dbWeeks)
     .then(function (lastKey) {
       console.log(`Done adding ${weeksIn75Year} weeks to database`);
-      console.log("Last raindrop's id was: " + lastKey);
+      console.log("Last week's id was: " + lastKey);
     })
     .catch(Dexie.BulkError, function (e) {
       console.error(
