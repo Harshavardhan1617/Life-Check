@@ -49,7 +49,7 @@ export default function CardList({
 
       <div className="list">
         {listOfTodos.map((el) => {
-          return <Card todo={el.text} key={el.id} />;
+          return <Card todo={el.text} key={el.todoID} />;
         })}
       </div>
       <CardFooter appendTodos={appendTodos} />

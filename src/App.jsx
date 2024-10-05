@@ -1,7 +1,7 @@
 import "./App.css";
 import Life from "./life/Life";
 import DateOfBirthPicker from "./DatePicker/DatePicker";
-import { db, createArray } from "../db";
+import { db, createArray, fetchPopulatedWeeks } from "../db";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -15,7 +15,8 @@ function App() {
         const count = await db.table("weeks").count();
         setDataToggle(count > 0);
         if (count > 0) {
-          const result = await db.weeks.toArray();
+          const result = await fetchPopulatedWeeks();
+          console.log(result);
           setData(result);
         }
       } catch (error) {
@@ -30,8 +31,9 @@ function App() {
 
   const handleDateSubmit = async (selectedDate) => {
     setIsLoading(true);
-    await createArray(selectedDate.valueOf());
-    const result = await db.weeks.toArray();
+    createArray(selectedDate.valueOf());
+    const result = await fetchPopulatedWeeks();
+    console.log(result);
     setData(result);
     setDataToggle(true);
     setIsLoading(false);

@@ -10,7 +10,6 @@ export default function Week({ todos, timeStamp }) {
   const [listTodos, setTodos] = useState(todos);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
-    console.log(timeStamp);
   };
   const handleClose = () => {
     setAnchorEl(null);

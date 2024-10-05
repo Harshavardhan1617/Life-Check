@@ -46,3 +46,18 @@ export const createArray = (dob) => {
       );
     });
 };
+
+export const fetchPopulatedWeeks = async () => {
+  const weeks = await db.weeks.toArray();
+  const populatedWeeks = await Promise.all(
+    weeks.map(async (week) => {
+      const populatedTodos = await Promise.all(
+        week.todo.map(async (todoId) => {
+          return await db.todos.get(String(todoId));
+        })
+      );
+      return { ...week, todo: populatedTodos };
+    })
+  );
+  return populatedWeeks;
+};
