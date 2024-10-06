@@ -1,6 +1,11 @@
 #root {
   background-color: #136f63;
   display: grid;
-  grid-template-rows: 1fr auto;
   height: 100vh;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
