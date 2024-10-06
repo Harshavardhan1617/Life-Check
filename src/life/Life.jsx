@@ -36,9 +36,7 @@ export default function Life() {
       setIsLoading(false);
     };
 
-    if (page !== 1) {
-      loadPageData();
-    }
+    loadPageData();
   }, [page, itemsPerPage]);
 
   const handleChange = (event, value) => {
