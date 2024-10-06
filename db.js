@@ -47,8 +47,8 @@ export const createArray = (dob) => {
     });
 };
 
-export const fetchPopulatedWeeks = async () => {
-  const weeks = await db.weeks.toArray();
+export const fetchPopulatedWeeks = async (offset = 0, limit = Infinity) => {
+  const weeks = await db.weeks.offset(offset).limit(limit).toArray();
   const populatedWeeks = await Promise.all(
     weeks.map(async (week) => {
       const populatedTodos = await Promise.all(
