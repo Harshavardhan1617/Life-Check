@@ -15,12 +15,19 @@ export default function Week({ todos: initialTodos, timeStamp }) {
     const today = Date.now();
     const timeStampWeek = timeStamp + 604800000;
     const isPast = timeStampWeek < today;
-    const hasTodos = todos.length > 0;
+    const emptyTodos = todos.length === 0;
+    const coupleOfTodos = todos.length > 0 && todos.length < 3;
+    const fewTodos = todos.length >= 3 && todos.length < 5;
+    const bunchOfTodos = todos.length >= 5;
 
-    if (isPast && hasTodos) return "var(--color-past)";
-    if (isPast && !hasTodos) return "var(--color-unfinished)";
-    if (!isPast && hasTodos) return "var(--color-future)";
-    return "var(--color-empty)";
+    if (isPast && coupleOfTodos) return "var(--color-filledPast)";
+    if (isPast && fewTodos) return "var(--color-filledPast1)";
+    if (isPast && bunchOfTodos) return "var(--color-filledPast2)";
+    if (isPast && emptyTodos) return "var(--color-emptyPast)";
+    if (!isPast && coupleOfTodos) return "var(--color-filledFuture)";
+    if (!isPast && fewTodos) return "var(--color-filledFuture1)";
+    if (!isPast && bunchOfTodos) return "var(--color-filledFuture2)";
+    if (!isPast && emptyTodos) return "var(--color-emptyFuture)";
   }, [timeStamp, todos.length]);
 
   const handleClick = useCallback((event) => {

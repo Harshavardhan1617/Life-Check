@@ -1,14 +1,18 @@
 .week-box {
   /* Custom properties grouped together */
-  --color-background: #023047;
-  --color-unfinished: #8ecae6;
-  --color-finished: #126782;
-  --color-past: #38b000;
-  --color-future: #ffb703;
+  --color-background: #012a4a;
+  --color-emptyPast: #01497c;
+  --color-filledPast: #1a7431;
+  --color-filledPast1: #25a244;
+  --color-filledPast2: #4ad66d;
+  --color-emptyFuture: #61a5c2;
+  --color-filledFuture: #ffaa00;
+  --color-filledFuture1: #ff8500;
+  --color-filledFuture2: #ff5400;
   --color-empty: #c2fcff;
 
   /* Fixed dimensions */
-  --box-size: 14px;
+  --box-size: 12px;
 
   height: var(--box-size);
   width: var(--box-size);

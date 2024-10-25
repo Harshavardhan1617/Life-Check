@@ -1,7 +1,8 @@
 #root {
   background-color: #136f63;
   display: grid;
-  height: 100vh;
+  overflow-y: auto;
+  min-height: 100vh;
 }
 
 html,
