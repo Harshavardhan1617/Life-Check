@@ -5,7 +5,7 @@ import "./Life.css";
 import { db, fetchPopulatedWeeks } from "../../db";
 
 export default function Life() {
-  const totalPages = 6;
+  const totalPages = 3;
   const [itemsPerPage, setItemsPerPage] = useState(0);
   const [page, setPage] = useState(1);
   const [currentPageData, setCurrentPageData] = useState([]);

@@ -1,23 +1,29 @@
 .week-box {
-  --background: #023047;
-  --unfinished-box: #8ecae6;
-  --finished-box: #126782;
-  --past-achievement: #fb8500;
-  --todo-future: #ffb703;
-  height: 20px;
-  width: 20px;
-  border-radius: 4px;
-  background-color: var(--todo-future);
+  /* Custom properties grouped together */
+  --color-background: #023047;
+  --color-unfinished: #8ecae6;
+  --color-finished: #126782;
+  --color-past: #38b000;
+  --color-future: #ffb703;
+  --color-empty: #c2fcff;
 
+  /* Fixed dimensions */
+  --box-size: 14px;
+
+  height: var(--box-size);
+  width: var(--box-size);
+  border-radius: 2px;
   display: inline-block;
+  transition: transform 0.2s ease;
 }
 
 .week-box:hover {
   cursor: pointer;
+  transform: scale(1.2);
 }
 
 .week-wrap {
-  display: inline-block;
-  margin: 10px;
-  height: 20px;
+  display: inline-flex;
+  padding: 4px;
+  height: var(--box-size);
 }

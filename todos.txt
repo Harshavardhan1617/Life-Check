@@ -1,0 +1,2 @@
+1. add checkbox for todos
+2. improve color scheme
