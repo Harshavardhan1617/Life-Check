@@ -1,0 +1,24 @@
+.achievement-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 40px;
+}
+
+.achievement {
+  display: inline-flex;
+  height: 56px;
+  width: 56px;
+  border-radius: 8px;
+  background-color: rgb(15, 30, 43);
+}
+/* .days {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 24px 40px;
+    margin: auto;
+  }
+  
+   */

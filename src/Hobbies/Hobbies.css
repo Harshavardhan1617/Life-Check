@@ -1,0 +1,8 @@
+.hobbies {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding: 24px 38px;
+  margin: auto;
+}

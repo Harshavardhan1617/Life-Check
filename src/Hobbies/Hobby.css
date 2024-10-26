@@ -1,0 +1,7 @@
+.hobby {
+  display: inline-flex;
+  height: 40px;
+  width: 40px;
+  border-radius: 4px;
+  background-color: rgb(22, 68, 109);
+}

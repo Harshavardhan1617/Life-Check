@@ -4,6 +4,9 @@ import React, { useRef } from "react";
 import Card from "../card/Card";
 import "./CardList.css";
 import CardFooter from "../cardfooter/CardFooter";
+import Days from "../Days/Days";
+import Hobbies from "../Hobbies/Hobbies";
+import Achievement from "../Achievements/Achievement";
 
 const calendarData = (stamp) => {
   const result = {
@@ -37,25 +40,30 @@ export default function CardList({
   };
 
   return (
-    <div className="whole-card">
-      <div className="card-header">
-        <p>{`${timeStampData.weekNumber} week of ${timeStampData.month}, ${timeStampData.year}`}</p>
-        <div
-          className="material-symbols-outlined close-icon"
-          onClick={closeCardList}
-        >
-          close
-        </div>
-      </div>
+    // <div className="whole-card">
+    //   <div className="card-header">
+    //     <p>{`${timeStampData.weekNumber} week of ${timeStampData.month}, ${timeStampData.year}`}</p>
+    //     <div
+    //       className="material-symbols-outlined close-icon"
+    //       onClick={closeCardList}
+    //     >
+    //       close
+    //     </div>
+    //   </div>
 
-      <div className="list">
-        {listOfTodos.map((todo) => {
-          return (
-            <Card todos={todo} key={todo.todoID} deleteTodos={deleteTodos} />
-          );
-        })}
-      </div>
-      <CardFooter appendTodos={appendTodos} />
+    //   <div className="list">
+    //     {listOfTodos.map((todo) => {
+    //       return (
+    //         <Card todos={todo} key={todo.todoID} deleteTodos={deleteTodos} />
+    //       );
+    //     })}
+    //   </div>
+    //   <CardFooter appendTodos={appendTodos} />
+    // </div>
+    <div className="card-board">
+      <Days />
+      <Hobbies />
+      <Achievement />
     </div>
   );
 }
