@@ -2,7 +2,7 @@
   display: flex;
   min-height: 88px;
   border-radius: 3px;
-  background-color: aliceblue;
+  background-color: #001219;
 }
 
 .item {
@@ -16,6 +16,10 @@
   width: 88%;
   text-align: left;
   padding-left: 12px;
+  background-color: #04395e;
+  color: #ffffff;
+  margin-left: 12px;
+  margin-bottom: 12px;
 }
 
 #options {
@@ -23,6 +27,8 @@
   flex-direction: column;
   width: 12%;
   margin-left: 0;
+  margin-bottom: 12px;
+  background-color: #001219;
 }
 
 #yes,
@@ -34,9 +40,16 @@
 }
 
 #yes {
-  background-color: green;
+  background-color: #70e000;
+  color: black;
 }
 
 #no {
-  background-color: red;
+  background-color: #f42b03;
+  color: #fff;
+}
+
+#yes:hover,
+#no:hover {
+  cursor: pointer;
 }

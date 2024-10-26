@@ -7,8 +7,12 @@ export default function Question() {
         <p>has this week been meaningful so far?</p>
       </div>
       <div id="options" className="item">
-        <div id="yes" className="item"></div>
-        <div id="no" className="item"></div>
+        <div id="yes" className="item material-symbols-outlined">
+          check
+        </div>
+        <div id="no" className="item material-symbols-outlined">
+          close
+        </div>
       </div>
     </div>
   );

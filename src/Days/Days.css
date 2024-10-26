@@ -6,16 +6,44 @@
   padding: 24px 40px;
 }
 
-#sunday,
-#monday,
-#tuesday,
-#wednesday,
-#thursday,
-#friday,
-#saturday {
+.day {
   display: inline-flex;
   height: 22px;
   width: 22px;
   border-radius: 3px;
   background-color: aliceblue;
+  transition: transform 0.2 ease;
+}
+
+.day:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#sunday {
+  background-color: #005f73;
+}
+
+#monday {
+  background-color: #0a9396;
+}
+
+#tuesday {
+  background-color: #94d2bd;
+}
+
+#wednesday {
+  background-color: #e9d8a6;
+}
+
+#thursday {
+  background-color: #ee9b00;
+}
+
+#friday {
+  background-color: #ca6702;
+}
+
+#saturday {
+  background-color: #bb3e03;
 }

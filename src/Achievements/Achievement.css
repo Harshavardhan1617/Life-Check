@@ -10,5 +10,10 @@
   height: 56px;
   width: 56px;
   border-radius: 8px;
-  background-color: rgb(15, 30, 43);
+  background-color: #ab87ff;
+  transition: transform 0.5 ease;
+}
+
+.achievement:hover {
+  transform: scale(0.94);
 }

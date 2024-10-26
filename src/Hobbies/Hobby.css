@@ -4,4 +4,10 @@
   width: 40px;
   border-radius: 4px;
   background-color: rgb(22, 68, 109);
+  transition: transform 0.4 ease;
+}
+
+.hobby:hover {
+  cursor: pointer;
+  transform: scale(0.9);
 }
