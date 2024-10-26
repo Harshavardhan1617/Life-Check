@@ -7,6 +7,7 @@ import CardFooter from "../cardfooter/CardFooter";
 import Days from "../Days/Days";
 import Hobbies from "../Hobbies/Hobbies";
 import Achievement from "../Achievements/Achievement";
+import Question from "../Question/Question";
 
 const calendarData = (stamp) => {
   const result = {
@@ -64,6 +65,7 @@ export default function CardList({
       <Days />
       <Hobbies />
       <Achievement />
+      <Question />
     </div>
   );
 }
