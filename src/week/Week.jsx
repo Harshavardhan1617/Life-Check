@@ -38,25 +38,51 @@ export default function Week({ todos: initialTodos, timeStamp }) {
     setAnchorEl(null);
   }, []);
 
-  const appendTodos = async (text) => {
-    const newTodoID = crypto.randomUUID();
-    const newTodo = { todoID: newTodoID, text: text, isChecked: false };
+  const appendTodos = useCallback(
+    async (text) => {
+      const newTodoID = crypto.randomUUID();
+      const newTodo = { todoID: newTodoID, text, isChecked: false };
 
-    setTodos((prevTodos) => [...prevTodos, newTodo]);
+      try {
+        setTodos((prevTodos) => [...prevTodos, newTodo]);
+        await Promise.all([
+          db.todos.add(newTodo),
+          db.weeks
+            .where("timeStamp")
+            .equals(timeStamp)
+            .modify((week) => {
+              week.todo = [...week.todo, newTodoID];
+            }),
+        ]);
+      } catch (error) {
+        setTodos((prevTodos) =>
+          prevTodos.filter((todo) => todo.todoID !== newTodoID)
+        );
+        console.error("Failed to add todo:", error);
+      }
+    },
+    [timeStamp]
+  );
 
-    await db.todos.add(newTodo);
-    const week = await db.weeks.get(timeStamp);
-    await db.weeks.put({ ...week, todo: [...week.todo, newTodoID] });
-  };
-
-  const deleteTodos = async (id) => {
-    setTodos((prevTodos) => prevTodos.filter((todo) => todo.todoID !== id));
-
-    await db.todos.delete(id);
-    const week = await db.weeks.get(timeStamp);
-    const updatedTodos = week.todo.filter((todoId) => todoId !== id);
-    await db.weeks.put({ ...week, todo: updatedTodos });
-  };
+  const deleteTodos = useCallback(
+    async (id) => {
+      try {
+        setTodos((prevTodos) => prevTodos.filter((todo) => todo.todoID !== id));
+        await Promise.all([
+          db.todos.delete(id),
+          db.weeks
+            .where("timeStamp")
+            .equals(timeStamp)
+            .modify((week) => {
+              week.todo = week.todo.filter((todoId) => todoId !== id);
+            }),
+        ]);
+      } catch (error) {
+        console.error("Failed to delete todo:", error);
+      }
+    },
+    [timeStamp]
+  );
 
   return (
     <div className="week-wrap">
